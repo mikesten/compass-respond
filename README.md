@@ -19,6 +19,21 @@ Example
         width: 70%
         max-width: 1150px
 
+Usage
+------
+
+First add compass-respond-to to your Gemfile:
+
+  gem "compass-respond-to"
+
+And require compass-respond-to in your compass.rb or config.rb:
+
+    require "compass-respond-to"
+
+Then you can import it into your .sass files:
+
+    @import "respond-to"
+
 Credit
 ------
 
