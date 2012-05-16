@@ -24,7 +24,7 @@ Usage
 
 First add compass-respond-to to your Gemfile:
 
-  gem "compass-respond-to"
+    gem "compass-respond-to"
 
 And require compass-respond-to in your compass.rb or config.rb:
 
