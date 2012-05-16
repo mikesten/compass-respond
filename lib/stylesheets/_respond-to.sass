@@ -1,13 +1,23 @@
+$respond-to-handhelds-max: 479px !default
+
+$respond-to-wide-handhelds-min: ($respond-to-handhelds-max + 1px) !default
+$respond-to-wide-handhelds-max: 767px !default
+
+$respond-to-tablets-min: ($respond-to-wide-handhelds-max + 1) !default
+$respond-to-tablets-max: 959px !default
+
+$respond-to-desktops-min: ($respond-to-tablets-max + 1) !default
+
 =respond-to($media)
   @if $media == handhelds
-    @media only screen and (max-width: 479px)
+    @media only screen and (max-width: $respond-to-handhelds-max)
       @content
   @else if $media == wide-handhelds
-    @media only screen and (min-width: 480px) and (max-width: 767px)
+    @media only screen and (min-width: $respond-to-wide-handhelds-min) and (max-width: $respond-to-wide-handhelds-max)
       @content
   @else if $media == tablets
-    @media only screen and (min-width: 768px) and (max-width: 959px)
+    @media only screen and (min-width: $respond-to-tablets-min) and (max-width: $respond-to-tablets-max)
       @content
   @else if $media == desktops
-    @media only screen and (min-width: 960px)
+    @media only screen and (min-width: $respond-to-desktops-min)
       @content
