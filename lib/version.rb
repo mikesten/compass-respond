@@ -1,4 +1,4 @@
-module FancyButtons
+module RespondTo
   module Version
     # Returns a hash representing the version.
     # The :major, :minor, and :teeny keys have their respective numbers.
