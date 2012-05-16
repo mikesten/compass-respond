@@ -17,7 +17,7 @@ Gem::Specification.new do |gemspec|
   gemspec.add_dependency 'sass', '~>3.2.0.alpha'
   gemspec.add_dependency 'compass', '>=0.11.7'
 
-  gemspec.files = %w(README.markdown VERSION.yml Rakefile)
+  gemspec.files = %w(README.md VERSION.yml Rakefile)
   gemspec.files += Dir.glob("lib/**/*")
 end
 

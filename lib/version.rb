@@ -47,7 +47,7 @@ module RespondTo
       end
     end
   end
-  extend FancyButtons::Version
+  extend RespondTo::Version
   def self.const_missing(const)
     # This avoid reading from disk unless the VERSION is requested.
     if const == :VERSION
