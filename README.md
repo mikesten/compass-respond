@@ -1,4 +1,4 @@
-sass-respond-to
+sass-respond
 ===============
 
 There are two parts to this...
@@ -68,13 +68,13 @@ CSS:
 Usage
 ------
 
-First add compass-respond-to to your Gemfile:
+First add compass-respond to your Gemfile:
 
-    gem "compass-respond-to"
+    gem "compass-respond"
 
 And require compass-respond-to in your compass.rb or config.rb:
 
-    require "compass-respond-to"
+    require "compass-respond"
 
 Then you can import the mixin you want into your .sass file:
 
