@@ -1,0 +1,22 @@
+$respond-above-xs: 480px !default
+$respond-above-s:  600px !default
+$respond-above-m:  768px !default
+$respond-above-l:  992px !default
+$respond-above-xl: 1382px !default
+
+=respond-above($screen-size)
+  @if $screen-size == xs
+    @media only screen and (min-width: $respond-above-xs)
+      @content
+  @else if $screen-size == s
+    @media only screen and (min-width: $respond-above-s)
+      @content
+  @else if $screen-size == m
+    @media only screen and (min-width: $respond-above-m)
+      @content
+  @else if $screen-size == l
+    @media only screen and (min-width: $respond-above-l)
+      @content
+  @else if $screen-size == xl
+    @media only screen and (min-width: $respond-above-xl)
+      @content

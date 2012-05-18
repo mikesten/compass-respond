@@ -8,16 +8,16 @@ $respond-to-tablets-max: 959px !default
 
 $respond-to-desktops-min: ($respond-to-tablets-max + 1) !default
 
-=respond-to($media)
-  @if $media == handhelds
+=respond-to($device)
+  @if $device == handhelds
     @media only screen and (max-width: $respond-to-handhelds-max)
       @content
-  @else if $media == wide-handhelds
+  @else if $device == wide-handhelds
     @media only screen and (min-width: $respond-to-wide-handhelds-min) and (max-width: $respond-to-wide-handhelds-max)
       @content
-  @else if $media == tablets
+  @else if $device == tablets
     @media only screen and (min-width: $respond-to-tablets-min) and (max-width: $respond-to-tablets-max)
       @content
-  @else if $media == desktops
+  @else if $device == desktops
     @media only screen and (min-width: $respond-to-desktops-min)
       @content
