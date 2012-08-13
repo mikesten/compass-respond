@@ -14,7 +14,7 @@ Gem::Specification.new do |gemspec|
   gemspec.rubygems_version = "1.4.2"
   gemspec.summary = "Easier media queries for Compass."
 
-  gemspec.add_dependency 'sass', '~>3.2.0.alpha'
+  gemspec.add_dependency 'sass', '>=3.2.0'
   gemspec.add_dependency 'compass', '>=0.11.7'
 
   gemspec.files = %w(README.md VERSION.yml Rakefile)
