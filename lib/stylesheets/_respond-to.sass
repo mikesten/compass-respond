@@ -23,3 +23,6 @@ $respond-to-desktops-min: ($respond-to-tablets-max + 1) !default
   @else if $device == desktops
     @media only screen and (min-width: $respond-to-desktops-min)
       @content
+  @else if $device == retina
+    @media only screen and (-webkit-min-device-pixel-ratio: 2)
+      @content

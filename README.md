@@ -10,6 +10,14 @@ There are two parts to this...
 +respond-to example
 -------------------
 
+Options:
+
+  * handhelds
+  * wide-handhelds
+  * tablets
+  * desktops
+  * retina
+
 SASS:
 
     @import "respond-to"
@@ -38,6 +46,14 @@ CSS:
 
 +respond-above example
 ----------------------
+
+Options:
+
+  * xs
+  * s
+  * m
+  * l
+  * xl
 
 SASS:
 
