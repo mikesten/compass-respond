@@ -13,6 +13,7 @@ There are two parts to this...
 Options:
 
   * handhelds
+  * high-handhelds
   * wide-handhelds
   * tablets
   * desktops
@@ -28,6 +29,11 @@ SASS:
       +respond-to(handhelds)
         .content-title
           display: none
+      +respond-to(high-handhelds)
+        .nav
+          position: absolute
+          top: 0
+          left: 0
       +respond-to(wide-handhelds)
         width: 90%
       +respond-to(tablets)

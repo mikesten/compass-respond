@@ -5,6 +5,8 @@ $respond-to-handhelds-max: 479px !default
 $respond-to-wide-handhelds-min: ($respond-to-handhelds-max + 1px) !default
 $respond-to-wide-handhelds-max: 767px !default
 
+$respond-to-high-handhelds-max: 568px !default
+
 $respond-to-tablets-min: ($respond-to-wide-handhelds-max + 1) !default
 $respond-to-tablets-max: 959px !default
 
@@ -13,6 +15,9 @@ $respond-to-desktops-min: ($respond-to-tablets-max + 1) !default
 =respond-to($device)
   @if $device == handhelds
     @media only screen and (max-width: $respond-to-handhelds-max)
+      @content
+  @else if $device == high-handhelds
+    @media only screen and (max-width: $respond-to-handhelds-max) and (device-height: $respond-to-high-handhelds-max)
       @content
   @else if $device == wide-handhelds
     @media only screen and (min-width: $respond-to-wide-handhelds-min) and (max-width: $respond-to-wide-handhelds-max)
