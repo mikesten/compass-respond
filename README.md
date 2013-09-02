@@ -1,14 +1,14 @@
 sass-respond
 ===============
 
-There are two parts to this...
+There are three parts to this...
 
   + +respond-to($device)
-
   + +respond-above($screen-size)
+  + +respond-below($screen-size)
 
-+respond-to example
--------------------
++respond-to
+-----------
 
 Options:
 
@@ -50,8 +50,8 @@ CSS:
     @media only screen and (min-width: 768px) and (max-width: 959px) { .content { width: 80%; } }
     @media only screen and (min-width: 960px) { .content { width: 70%; max-width: 1150px; } }
 
-+respond-above example
-----------------------
++respond-above
+--------------
 
 Options:
 
@@ -86,9 +86,44 @@ CSS:
     @media only screen and (min-width: 992px) { .charts { column-count: 5; } }
     @media only screen and (min-width: 1382px) { .charts { column-count: 6; } }
 
++respond-below
+--------------
 
+Options:
+
+  * xs
+  * s
+  * m
+  * l
+  * xl
+
+SASS:
+
+    @import "respond-below"
+    .charts
+      column-count: 6
+      +respond-below(xl)
+        column-count: 5
+      +respond-below(l)
+        column-count: 4
+      +respond-below(m)
+        column-count: 3
+      +respond-below(s)
+        column-count: 2
+      +respond-below(xs)
+        column-count: 1
+      
+CSS:
+
+    .charts { column-count: 6; }
+    @media only screen and (max-width: 1382px) { .charts { column-count: 5; } }
+    @media only screen and (min-width: 992px) { .charts { column-count: 4; } }
+    @media only screen and (min-width: 768px) { .charts { column-count: 3; } }
+    @media only screen and (min-width: 600px) { .charts { column-count: 2; } }
+    @media only screen and (min-width: 480px) { .charts { column-count: 1; } }
+    
 Usage
-------
+-----
 
 First add compass-respond to your Gemfile:
 
@@ -102,6 +137,13 @@ Then you can import the mixin you want into your .sass file:
 
     @import "respond-to"
     @import "respond-above"
+    @import "respond-below"
+
+Contributors
+------------
+
+@mikesten
+@mavilein
 
 Credit
 ------
@@ -109,6 +151,8 @@ Credit
 respond-to() is a convenience plugin for [Chris Eppstein's Gist](https://gist.github.com/1215856#file_7_media_queries.sass) demonstrating Sass 3.2's block passing to mixins.
 
 respond-above() is a simple mixin based on Malarkey's [320andup](https://github.com/malarkey/320andup/) responsive steps.
+
+respond-below() is the work of [mavilein](https://github.com/mavilein).
 
 I'm fully expecting Compass to add something like this in the near future.
 
