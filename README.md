@@ -142,8 +142,8 @@ Then you can import the mixin you want into your .sass file:
 Contributors
 ------------
 
-@mikesten
-@mavilein
+  * [mikesten](https://github.com/mikesten)
+  * [mavilein](https://github.com/mavilein)
 
 Credit
 ------
