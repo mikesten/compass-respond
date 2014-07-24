@@ -60,6 +60,7 @@ Options:
   * m
   * l
   * xl
+  * xxl
 
 SASS:
 
@@ -76,6 +77,8 @@ SASS:
         column-count: 5
       +respond-above(xl)
         column-count: 6
+      +respond-above(xxl)
+        column-count: 7
 
 CSS:
 
@@ -85,6 +88,7 @@ CSS:
     @media only screen and (min-width: 768px) { .charts { column-count: 4; } }
     @media only screen and (min-width: 992px) { .charts { column-count: 5; } }
     @media only screen and (min-width: 1382px) { .charts { column-count: 6; } }
+    @media only screen and (min-width: 1824px) { .charts { column-count: 7; } }
 
 +respond-below
 --------------
@@ -96,12 +100,15 @@ Options:
   * m
   * l
   * xl
+  * xxl
 
 SASS:
 
     @import "respond-below"
     .charts
-      column-count: 6
+      column-count: 7
+      +respond-below(xxl)
+        column-count: 6
       +respond-below(xl)
         column-count: 5
       +respond-below(l)
@@ -115,7 +122,8 @@ SASS:
       
 CSS:
 
-    .charts { column-count: 6; }
+    .charts { column-count: 7; }
+    @media only screen and (max-width: 1824px) { .charts { column-count: 6; } }
     @media only screen and (max-width: 1382px) { .charts { column-count: 5; } }
     @media only screen and (min-width: 992px) { .charts { column-count: 4; } }
     @media only screen and (min-width: 768px) { .charts { column-count: 3; } }

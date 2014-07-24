@@ -1,8 +1,9 @@
-$respond-below-xs: 480px !default
-$respond-below-s:  600px !default
-$respond-below-m:  768px !default
-$respond-below-l:  992px !default
-$respond-below-xl: 1382px !default
+$respond-below-xs:  480px !default
+$respond-below-s:   600px !default
+$respond-below-m:   768px !default
+$respond-below-l:   992px !default
+$respond-below-xl:  1382px !default
+$respond-below-xxl: 1824px !default
 
 =respond-below($screen-size)
   @if $screen-size == xs
@@ -19,4 +20,7 @@ $respond-below-xl: 1382px !default
       @content
   @else if $screen-size == xl
     @media only screen and (max-width: $respond-below-xl)
+      @content
+  @else if $screen-size == xxl
+    @media only screen and (max-width: $respond-below-xxl)
       @content
