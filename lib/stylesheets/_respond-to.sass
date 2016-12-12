@@ -31,3 +31,9 @@ $respond-to-desktops-min: ($respond-to-tablets-max + 1) !default
   @else if $device == retina
     @media only screen and (-webkit-min-device-pixel-ratio: 2)
       @content
+  @else if $device == landscape
+    @media only screen and (orientation: landscape)
+      @content
+  @else if $device == portrait
+    @media only screen and (orientation: portrait)
+      @content

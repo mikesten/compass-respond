@@ -18,6 +18,8 @@ Options:
   * tablets
   * desktops
   * retina
+  * landscape
+  * portrait
 
 SASS:
 
@@ -41,6 +43,8 @@ SASS:
       +respond-to(desktops)
         width: 70%
         max-width: 1150px
+      +respond-to(landscape)
+        width: 50%
 
 CSS:
 
